@@ -1,0 +1,116 @@
+@import 'maps.less';
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(max-width: 1023px)";
+
+.marginBottom8 {
+    margin-bottom: 8px;
+}
+.fontSize14 {
+    font-size: 14px;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    background-color: #colors[backgroundColor];
+    color: #colors[textColor];
+}
+
+li {
+    list-style: none;
+}
+
+.container { 
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+}
+
+header {
+    padding-bottom:  24px;
+
+    .profile-avatar{
+        
+        display: block;
+        margin: 62px auto 24px;
+        border-radius: 50%;
+        height: 150px;
+        border: 3px solid #colors[buttomColor];
+    }
+}
+.profile-bio {
+    text-align: center;
+    &-name {
+        font-size: 16px;
+        .marginBottom8
+    }
+    &-subtitlle {
+        .fontSize14;
+        .marginBottom8
+    }
+    &-description {
+        .fontSize14;
+        opacity: .7;
+    }
+}
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+
+    li {
+
+        img {
+            transition: all .3s;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+.project-list {
+    margin-top: 32px;
+    
+    &-item {
+        a {
+        text-decoration: none;
+        background-color: #colors[buttomColor];
+        display: block;
+        padding: 16px 20px;
+        margin-bottom: 16px;
+        text-align: center;
+        color: #colors[textColor];
+        font-weight: bold;
+        border-radius: 30px;
+        border: 1px solid #colors[buttomColor];
+
+        &:hover {
+            color: #colors[textColor];
+            background-color: transparent;
+            transition: all ease .5s;
+            
+        }
+        }
+    }
+}
